@@ -27,3 +27,6 @@ vim.keymap.set("n", "<leader>co", ":copen<CR>", { noremap = true, silent = true 
 vim.keymap.set("n", "<leader>cc", ":cclose<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "]q", ":cnext<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "[q", ":cprev<CR>", { noremap = true, silent = true })
+
+vim.keymap.set("n", "<leader>fF", LazyVim.pick("files"), { desc = "Find Files (Root Dir)" })
+vim.keymap.set("n", "<leader>ff", LazyVim.pick("files", { root = false }), { desc = "Find Files (cwd)" })
