@@ -6,7 +6,10 @@ return {
         "MunifTanjim/nui.nvim",
     },
     opts = {
-        -- configuration goes here
-        lang = "typescript",
+        lang = "python3",
+        storage = {
+            home = vim.fn.expand("~/Documents/Github/leetcode"), -- Change this to your preferred path
+            cache = vim.fn.expand("~/.cache/leetcode"),
+        },
     },
 }

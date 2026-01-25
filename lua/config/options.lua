@@ -29,3 +29,7 @@ opt.clipboard:append("unnamedplus")
 opt.splitright = true
 opt.splitbelow = true
 vim.api.nvim_set_hl(0, "CopilotSuggestion", { fg = "#555555", italic = true })
+
+vim.diagnostic.config({
+    virtual_text = false,
+})

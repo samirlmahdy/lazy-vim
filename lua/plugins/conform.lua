@@ -9,7 +9,7 @@ return {
             javascriptreact = { "eslint_d" },
             typescript = { "eslint_d" },
             typescriptreact = { "eslint_d" },
-            python = { "eslint_d" },
+            python = { "black" },
         },
         -- ... rest of config
     },

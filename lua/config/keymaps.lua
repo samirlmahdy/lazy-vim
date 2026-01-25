@@ -9,6 +9,8 @@ local keymaps = vim.keymap
 
 keymaps.set("n", "<C-d>", "<C-d>zz")
 keymaps.set("n", "<C-u>", "<C-u>zz")
+keymaps.set("v", "J", ":m '>+1<CR>gv=gv")
+keymaps.set("v", "K", ":m '<-2<CR>gv=gv")
 keymaps.set("n", "n", "nzzzv")
 keymaps.set("n", "N", "Nzzzv")
 
@@ -32,3 +34,7 @@ keymaps.set("n", "<leader>fF", LazyVim.pick("files"), { desc = "Find Files (Root
 keymaps.set("n", "<leader>ff", LazyVim.pick("files", { root = false }), { desc = "Find Files (cwd)" })
 keymaps.set("n", "<leader>ghh", "<cmd>Neogit<CR>", { desc = "Git" })
 keymaps.set("n", "<leader>gq", "<cmd>GitConflictListQf<CR>", { desc = "Git (Tab)" })
+keymaps.set("n", "<leader>cpc", "<cmd>Copilot disable<CR>", { desc = "Copilot disable" })
+keymaps.set("n", "<leader>cpp", "<cmd>Copilot enable<CR>", { desc = "Copilot enable" })
+keymaps.set("n", "<leader>ckd", "<cmd>Sidekick nes disable<CR>", { desc = "Sidekick disable" })
+keymaps.set("n", "<leader>ckn", "<cmd>Sidekick nes enable<CR>", { desc = "Sidekick enable" })
