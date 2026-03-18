@@ -33,3 +33,8 @@ vim.api.nvim_set_hl(0, "CopilotSuggestion", { fg = "#555555", italic = true })
 vim.diagnostic.config({
     virtual_text = false,
 })
+
+-- Neovim (init.lua)
+vim.g.dbs = {
+    namshi_db = "mysql://root:root@mysql.default.svc.cluster.local/namshi",
+}
