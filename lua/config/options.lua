@@ -36,5 +36,34 @@ vim.diagnostic.config({
 
 -- Neovim (init.lua)
 vim.g.dbs = {
-    namshi_db = "mysql://root:root@mysql.default.svc.cluster.local/namshi",
+    namshi = "mysql://root:root@127.0.0.1:30306/namshi",
 }
+
+vim.diagnostic.config({
+    -- virtual_lines = true, -- this gets messy on large code base with tons of errors
+    -- Select either virtual lines or text below otherwise it gets messy
+    virtual_text = {
+        spacing = 4,
+        prefix = "●", -- This is fine as a string
+    },
+
+    underline = true,
+    update_in_insert = false,
+    severity_sort = true,
+    float = {
+        border = "rounded",
+        source = true,
+    },
+    signs = {
+        text = {
+            [vim.diagnostic.severity.ERROR] = "󰅚 ",
+            [vim.diagnostic.severity.WARN] = "󰀪 ",
+            [vim.diagnostic.severity.INFO] = "󰋽 ",
+            [vim.diagnostic.severity.HINT] = "󰌶 ",
+        },
+        numhl = {
+            [vim.diagnostic.severity.ERROR] = "ErrorMsg",
+            [vim.diagnostic.severity.WARN] = "WarningMsg",
+        },
+    },
+})

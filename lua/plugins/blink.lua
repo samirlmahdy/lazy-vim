@@ -5,6 +5,18 @@ return {
     },
     opts = {
         completion = {
+            signature = {
+                enabled = true,
+                window = {
+                    border = "rounded",
+                },
+            },
+            completion = {
+                menu = {
+                    border = "rounded",
+                    draw = { gap = 1 },
+                },
+            },
             menu = {
                 draw = {
                     columns = {
