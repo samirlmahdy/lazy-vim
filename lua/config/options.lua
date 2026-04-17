@@ -13,6 +13,7 @@ opt.expandtab = true
 opt.smartindent = true
 opt.ignorecase = true
 opt.nu = true
+opt.termguicolors = true
 opt.relativenumber = true
 opt.wrap = false
 opt.incsearch = true
